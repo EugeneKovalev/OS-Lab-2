@@ -30,7 +30,6 @@ int main(int argc, char* argv[])
 	_write(fourthVirtualBlock, fourthVirtualBuffer, strlen((char*)fourthVirtualBuffer));
 	_write(fifthVirtualBlock, fifthVirtualBuffer, strlen((char*)fifthVirtualBuffer));
 
-
 	print();
 	_write(thirdVirtualBlock, "Foxtrot", strlen("Foxtrot"));
 	print();
@@ -42,12 +41,10 @@ int main(int argc, char* argv[])
 
 void print()
 {
-	VA firstVirtualBlock = "1", secondVirtualBlock = "2", thirdVirtualBlock = "3", fourthVirtualBlock = "4", fi = "5";
 	struct block* cur;
 	size_t freeMemory = 0;
 	int i = 0;
 	char d[40];
-
 
 	cur = firstBlock;
 	while (cur != NULL)
